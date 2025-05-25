@@ -16,6 +16,8 @@ steps:
       - 'gcr.io/$PROJECT_ID/$_SERVICE_NAME:$COMMIT_SHA'
       - '--region'
       - '$_DEPLOY_REGION'
+      - '--port=8761'
+      - '--startup-probe-http-endpoint=/actuator/health'
 options:
   logging: CLOUD_LOGGING_ONLY
 
