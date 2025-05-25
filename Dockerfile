@@ -1,4 +1,4 @@
-FROM openjdk:24-jdk
+FROM openjdk:24
 VOLUME /tmp
 ADD target/eureka-server-0.0.1-SNAPSHOT.jar app.jar
 ENTRYPOINT ["java", "-jar", "/app.jar"]
